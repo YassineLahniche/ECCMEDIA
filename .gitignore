@@ -1,0 +1,22 @@
+# Node
+node_modules/
+/frontend/build
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.vs/
+.idea/
+
+# OS
+.DS_Store
