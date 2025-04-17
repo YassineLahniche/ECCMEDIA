@@ -8,7 +8,7 @@ A media platform with user authentication, article publishing, and admin capabil
 - Role-based access control (admin, writer)
 - Article creation and management
 - Admin dashboard
-- Responsive design
+- Responsive designs
 
 ## Tech Stack
 
