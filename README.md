@@ -8,7 +8,7 @@ A media platform with user authentication, article publishing, and admin capabil
 - Role-based access control (admin, writer)
 - Article creation and management
 - Admin dashboard
-- Responsive design
+- Responsive designs
 
 ## Tech Stack
 
@@ -52,12 +52,7 @@ ecc-media/
    pip install -r requirements.txt
    ```
 
-4. Create a .env file:
-   ```
-   cp ../.env.sample ./.env
-   ```
-   
-5. Run the Flask application:
+4. Run the Flask application:
    ```
    python app.py
    ```
