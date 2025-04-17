@@ -1,24 +1,209 @@
-.App {
+/* frontend/src/App.css */
+:root {
+    --primary-color: #00325A;
+    --secondary-color: #3A46B;
+    --accent-color: #193331;
+    --highlight-color: #CF9D04;
+    --background-color: #FAF9F6;
+    --text-light: #FAF9F6;
+    --text-dark: #222;
+    --error-color: #d32f2f;
+    --success-color: #388e3c;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  
+  .App {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.App-header {
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-}
-
-article {
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 1px solid #eee;
+  }
+  
+  /* Header */
+  .App-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
     border-radius: 5px;
-}
-
-h3 {
-    margin-top: 0;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .App-header h1 {
+    margin: 0;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--highlight-color);
+  }
+  
+  /* Articles */
+  .articles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  article {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  article h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  article .meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  article .content {
+    margin-bottom: 1rem;
+  }
+  
+  article .actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--accent-color);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .btn-accent {
+    background-color: var(--accent-color);
+  }
+  
+  .btn-highlight {
+    background-color: var(--highlight-color);
+  }
+  
+  /* Forms */
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Auth Pages */
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+  
+  .auth-container h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .auth-form {
+    width: 100%;
+  }
+  
+  .auth-links {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .auth-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }

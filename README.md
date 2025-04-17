@@ -1,16 +1,106 @@
 # ECC Media Platform
 
-ECC Media est un laboratoire journalistique �tudiant qui combine journalisme traditionnel et nouveaux m�dias pour offrir une couverture approfondie de l'actualit� universitaire, des innovations scientifiques et des tendances culturelles.
+A media platform with user authentication, article publishing, and admin capabilities.
 
-## Structure
-- `/admin` - Admin dashboard
-- `/backend` - Python Flask API
-- `/frontend` - React frontend application
+## Features
 
-## Installation
-1. Set up backend: `cd backend && pip install -r requirements.txt`
-2. Set up frontend: `cd frontend && npm install`
+- User authentication (login, register)
+- Role-based access control (admin, writer)
+- Article creation and management
+- Admin dashboard
+- Responsive design
 
-## Running
-1. Start backend: `cd backend && python app.py`
-2. Start frontend: `cd frontend && npm start`
+## Tech Stack
+
+- **Backend**: Flask, SQLAlchemy, JWT Authentication
+- **Frontend**: React, React Router, Axios
+- **Database**: SQLite (development), PostgreSQL (production-ready)
+
+## Project Structure
+
+```
+ecc-media/
+│
+├── backend/         # Flask REST API
+├── frontend/        # React application
+└── admin/           # Admin interface documentation
+```
+
+## Setup Instructions
+
+### Prerequisites
+
+- Python 3.8+
+- Node.js 14+
+- npm or yarn
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+   ```
+   cd backend
+   ```
+
+2. Create and activate a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Create a .env file:
+   ```
+   cp ../.env.sample ./.env
+   ```
+   
+5. Run the Flask application:
+   ```
+   python app.py
+   ```
+   
+The backend API will be available at http://localhost:5000.
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm start
+   ```
+
+The frontend application will be available at http://localhost:3000.
+
+## Production Deployment
+
+For production deployment:
+
+1. Set proper environment variables in .env
+2. Update DATABASE_URL to point to your production database
+3. Generate a secure JWT_SECRET_KEY
+4. Build the frontend:
+   ```
+   cd frontend
+   npm run build
+   ```
+5. Serve the Flask application with a production server like Gunicorn
+
+## Color Palette
+
+- **#00325A** - Deep Navy Blue (Primary Color)
+- **#3A46B** - Dark Slate Blue (Secondary Color)
+- **#193331** - Dark Forest Green (Accent Color)
+- **#CF9D04** - Golden Yellow (Highlight Color)
+- **#FAF9F6** - Soft Cream White (Background/Neutral Color)
