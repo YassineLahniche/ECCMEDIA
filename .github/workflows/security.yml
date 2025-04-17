@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: '0 0 * * 0'  # Run every Sunday at midnight
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'backend/requirements.txt'
       - 'frontend/package.json'
